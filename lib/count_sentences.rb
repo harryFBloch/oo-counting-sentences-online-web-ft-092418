@@ -28,8 +28,8 @@ class String
 
   def count_sentences
     array = self.split(Regexp.union(".","?","!"))
-    array.select(&:presence)
-    length = array.length
+    newArray = array.reject!(&:blank?)
+    length = newArray.length
     #binding.pry
   end
 end
