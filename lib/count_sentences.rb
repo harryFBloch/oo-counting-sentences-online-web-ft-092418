@@ -30,6 +30,6 @@ class String
     array = self.split(Regexp.union(".","?","!"))
     array.delete_if(&:blank?)
     length = array.length
-    binding.pry
+    #binding.pry
   end
 end
