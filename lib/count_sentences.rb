@@ -28,7 +28,7 @@ class String
 
   def count_sentences
     array = self.split(Regexp.union(".","?","!"))
-    array.delete_if(&:blank?)
+    array.select(&:presence)
     length = array.length
     #binding.pry
   end
